@@ -1,101 +1,43 @@
+"use client"
 import Image from "next/image";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import pdp from './assets/pdp.png';
+import logoJS from './assets/LogoJS.png'
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="bg-dark text-white min-h-screen w-full flex" style={{height: "100%"}}>
+      <Image 
+      src={pdp}
+      alt="pdp"
+      className="rounded-full"
+      style={{width: '110px', height: '100px', marginLeft: "50px", marginTop: "50px"}}
+      />
+      <h3>Christian Ferreol</h3><br></br>
+    
+    <div className="card bg-dark" style={{borderColor: "orange", color: "white", width: "50%", marginTop: "70px", height: "500px"}}>
+      <div className="card-body" >
+        <h5 className="card-title">Christian Ferreol</h5>
+        <p>Je me nomme  Jean-Christian , apprenant dans le developpement web fullstack, agé de 14 ans</p>
+        <p>Depuis mes 13 ans, j'ai découvert ma passion pour la programmation</p>
+        <p>J'ai déjà travaillé sur plusieurs projets en html, css, js, react, node, express et mongodb</p>
+        <p>J'ai déjà travaillé avec des frameworks comme bootstrap et tailwindcss</p>
+        <p>Pour être honnête, je ne suis pas encore compétent mais j'ai déjà réussi à créer des sites web fonctionnels, Mais malheuresement je n'ai pas pu les mettre en ligne pour des raisons personnelles</p>
+        <p>Actullement, j'suis encore un élève certe mais j'ai pour objectif de devenir un expert dans le domaine</p>
+        <p>J'espère que vous apprécierez mon travail</p>
+        <p>Merci pour votre temps</p>
+      </div><br></br><br></br><br></br>
+      
+     
+    </div>
+    <div className="card bg-dark" style={{borderColor: "orange", color: "white", width: "50%", marginTop: "70px", height: "500px"}}>
+      <div className="card-body">
+        <Image 
+        src={logoJS}
+        alt="logoJS"
+        style={{width: '110px', height: '100px', marginLeft: "50px"}}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+    </div>
     </div>
   );
 }
