@@ -8,38 +8,62 @@ import './responsive.css';
 export const metadata: Metadata = {
   title: "Jean-christ",
   description: "Dev rookie full stack",
+  icons: "./assets/pdp.png",
+  
 }
 
 export default function Home() {
   return (
-    <div className="bg-dark text-white min-h-screen w-full flex" style={{ height: "100%" }}>
-      <Image 
-        src={pdp}
-        alt="pdp"
-        className="rounded-full"
-        style={{ width: '110px', height: '100px', marginLeft: "50px", marginTop: "50px" }}
-      />
-      <h3>Christian Ferreol</h3>
-    
-      <div className="card bg-dark" style={{ borderColor: "orange", color: "white", width: "70%", marginTop: "70px", height: "600px" }}>
-        <div className="card-body">
-          <h5 className="card-title">Christian Ferreol</h5>
-          <p>Je me nomme Jean-Christian, apprenant dans le développement web fullstack, âgé de 14 ans.</p>
-          <p>Depuis mes 13 ans, j&apos;ai découvert ma passion pour la programmation.</p>
-          <p>J&apos;ai déjà travaillé sur plusieurs projets en HTML, CSS, JS, React, Node, Express et MongoDB.</p>
-          <p>J&apos;ai déjà travaillé avec des frameworks comme Bootstrap et TailwindCSS.</p>
-          <p>Pour être honnête, je ne suis pas encore compétent mais j&apos;ai déjà réussi à créer des sites web fonctionnels. Malheureusement, je n&apos;ai pas pu les mettre en ligne pour des raisons personnelles.</p>
-          <p>Actuellement, je suis encore élève, certes, mais j&apos;ai pour objectif de devenir un expert dans le domaine.</p>
-          <p>J&apos;espère que vous apprécierez mon travail.</p>
-          <p>Merci pour votre temps.</p>
-          <h3><u>Langages et frameworks utilisés</u></h3>
-          <Image 
-            src={logoJS}
-            alt="logoJS"
-            style={{ width: '110px', height: '100px' }}
-          />
+    <main className="bg-gray-900 text-white min-h-screen">
+      <header className="container mx-auto py-16 px-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <Image 
+              src={pdp}
+              alt="Christian Ferreol"
+              className="rounded-full w-24 h-24 border-4 border-orange-500"
+            />
+            <h1 className="text-4xl font-bold">Christian Ferreol</h1>
+          </div>
+          <nav>
+            <ul className="flex space-x-6">
+              <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
+              <li><a href="#skills" className="hover:text-orange-500 transition">Compétences</a></li>
+              <li><a href="#projects" className="hover:text-orange-500 transition">Projets</a></li>
+            </ul>
+          </nav>
         </div>
-      </div>
-    </div>
+      </header>
+
+      <section id="about" className="container mx-auto py-16 px-4">
+        <div className="bg-gray-800 rounded-lg shadow-lg p-8">
+          <h2 className="text-3xl font-bold mb-6">À propos de moi</h2>
+          <p className="mb-4">Je me nomme Jean-Christian, apprenant dans le développement web fullstack, âgé de 14 ans. Depuis mes 13 ans, j&apos;ai découvert ma passion pour la programmation.</p>
+          <p className="mb-4">J&apos;ai déjà travaillé sur plusieurs projets en HTML, CSS, JS, React, Node, Express et MongoDB. J&apos;ai également de l&apos;expérience avec des frameworks comme Bootstrap et TailwindCSS.</p>
+          <p className="mb-4">Pour être honnête, je ne suis pas encore un expert, mais j&apos;ai déjà réussi à créer des sites web fonctionnels. Actuellement, je suis encore élève, mais j&apos;ai pour objectif de devenir un expert dans le domaine.</p>
+        </div>
+      </section>
+
+      <section id="skills" className="container mx-auto py-16 px-4">
+        <h2 className="text-3xl font-bold mb-8">Compétences</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {
+          ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB', 'Bootstrap', 'TailwindCSS'].map((skill) => (
+            <div key={skill} className="bg-gray-800 rounded-lg p-4 text-center">
+              <p className="font-semibold">{skill}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    
+
+      <footer className="bg-gray-800 py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; 2024 Christian Ferreol. Tous droits réservés.</p>
+        </div>
+      </footer>
+    </main>
+  
   );
 }
