@@ -2,8 +2,8 @@ import type{Metadata} from 'next';
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdp from './assets/pdp.png';
-import logoJS from './assets/LogoJS.png';
 import './responsive.css';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Jean-christ",
@@ -29,7 +29,8 @@ export default function Home() {
             <ul className="flex space-x-6">
               <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
               <li><a href="#skills" className="hover:text-orange-500 transition">Compétences</a></li>
-              <li><a href="#projects" className="hover:text-orange-500 transition">Projets</a></li>
+              <li><a href="#projects" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Projets</button></a></li>
+          
             </ul>
           </nav>
         </div>
@@ -60,7 +61,8 @@ export default function Home() {
 
       <footer className="bg-gray-800 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Christian Ferreol. Tous droits réservés.</p>
+          <p>&copy; 2024 Christian Ferreol. Tous droits réservés. &copy;</p>
+          
         </div>
       </footer>
     </main>
