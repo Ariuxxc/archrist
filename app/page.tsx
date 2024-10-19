@@ -1,9 +1,14 @@
-"use client";
+import type{Metadata} from 'next';
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdp from './assets/pdp.png';
 import logoJS from './assets/LogoJS.png';
 import './responsive.css';
+
+export const metadata: Metadata = {
+  title: "Jean-christ",
+  description: "Dev rookie full stack",
+}
 
 export default function Home() {
   return (
