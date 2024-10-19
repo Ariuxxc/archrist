@@ -3,7 +3,6 @@ import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdp from './assets/pdp.png';
 import './responsive.css';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: "Jean-christ",
