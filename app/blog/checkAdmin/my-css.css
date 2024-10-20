@@ -1,0 +1,9 @@
+.container {
+    margin-top: "80px"
+}
+.box {
+    width: 40rem;
+    align-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
