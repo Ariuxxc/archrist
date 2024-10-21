@@ -63,7 +63,7 @@ if (Cookies.get('isConnect') === 'true') {
                   onChange={handleChange} 
                   required
                 />
-                <label htmlFor="floatingName">Nom d'utilisateur</label>
+                <label htmlFor="floatingName">Nom d&apos;utilisateur</label>
               </div>
               <div className="form-floating mb-3">
                 <input 

@@ -14,6 +14,7 @@ export default function AdminPanel() {
             console.log('Bienvenue'); // Remplacez par une notification visuelle
         }
     }, [router]);
+    
 
     return (
         <h1>Admin-panel</h1>
