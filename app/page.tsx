@@ -1,22 +1,31 @@
-import type { Metadata } from 'next';
+
+"use client"
+
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdp from './assets/pdp.png';
 import './responsive.css';
 import Cookies from 'js-cookie';
+import {useState, useEffect} from 'react';
+import Link from 'next/link'
 
-export const metadata: Metadata = {
-    title: "Jean-christ",
-    description: "Dev rookie full stack",
-    icons: "./assets/pdp.png",
-}
 
 export default function Home() {
-    // Définissez le cookie sur 'false' uniquement si l'utilisateur n'est pas connecté
+const [isConnect, setIsConnect] = useState(false);
+
+useEffect(() => {
+        // Définissez le cookie sur 'false' uniquement si l'utilisateur n'est pas connecté
     const isAuthenticated = Cookies.get('isConnect');
     if (!isAuthenticated) {
         Cookies.set('isConnect', 'false');
     }
+if (isAuthenticated === 'true') {
+    setIsConnect(true)
+}
+
+})
+
+
 
     return (
         <main className="bg-gray-900 text-white min-h-screen">
@@ -34,7 +43,11 @@ export default function Home() {
                         <ul className="flex space-x-6">
                             <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
                             <li><a href="#skills" className="hover:text-orange-500 transition">Compétences</a></li>
-                            <li><a href="#projects" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Projets</button></a></li>
+                            {isConnect && (
+                                 <li><Link href="/blog/admin-panel" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Panneau d'admin</button></Link></li>
+                            )
+                           
+}
                         </ul>
                     </nav>
                 </div>
