@@ -117,9 +117,9 @@ export default function Post() {
                                 {article.length > 0 ? (
                                     article.map(articles => (
                                         <tr key={articles.id}>
-                                            <td>{articles.title || 'Titre non disponible'}</td>
-                                            <td>{articles.content ? articles.content.slice(0, 50) + '...' : 'Contenu non disponible'}</td>
-                                            <td>{articles.author || 'Auteur non disponible'}</td>
+                                            <td>{articles.title || `Titre non disponible`}</td>
+                                            <td>{articles.content ? articles.content.slice(0, 50) + `...` : `Contenu non disponible`}</td>
+                                            <td>{articles.author || `Auteur non disponible`}</td>
                                         </tr>
                                     ))
                                 ) : (
