@@ -14,7 +14,6 @@ export default function Post() {
     axios.defaults.baseURL = "https://back-express-8g76.onrender.com";
     const [article, setArticle] = useState<Article[]>([]);
     const [isForm, setIsForm] = useState(false);
-    const [message, setMessage] = useState(``);
     const [viewArticle, setViewArticle] = useState(false);
     const [FormData, setFormData] = useState({
         title: "",
@@ -29,7 +28,7 @@ export default function Post() {
                 setArticle(response.data);
             } catch (error) {
                 console.error('Erreur lors de la récupération des articles:', error);
-                setMessage("Erreur lors de la récupération des articles");
+                alert("Erreur lors de la récupération des articles");
             }
         }
         liArticle();
@@ -38,17 +37,17 @@ export default function Post() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!FormData.title || !FormData.content || !FormData.author) {
-            setMessage("Tous les champs doivent être remplis");
+            alert("Tous les champs doivent être remplis");
             return;
         }
         try {
             const send = await axios.post('/api/add-article', FormData);
-            setMessage("Envoyé avec succès");
+            alert("Envoyé avec succès");
             console.log('Envoyé avec succès' + send.status);
             setFormData({ title: "", content: "", author: "" }); // Réinitialiser le formulaire
         } catch (error) {
             console.error(error);
-            setMessage("Erreur lors de la soumission");
+            alert("Erreur lors de la soumission");
         }
     };
 
@@ -98,9 +97,6 @@ export default function Post() {
                                     <button className="btn btn-danger" onClick={() => { setIsForm(false) }}>Annuler</button>
                                 </form>
                             )}
-                            <div className="alert alert-info" role="alert">
-                                <i className="bi bi-info-circle me-2"></i>{message}
-                            </div>
                         </div>
                         {viewArticle && (
 

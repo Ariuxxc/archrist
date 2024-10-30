@@ -14,7 +14,6 @@ export default function Home() {
 const [isConnect, setIsConnect] = useState(false);
 
 useEffect(() => {
-        // Définissez le cookie sur 'false' uniquement si l'utilisateur n'est pas connecté
     const isAuthenticated = Cookies.get('isConnect');
     if (!isAuthenticated) {
         Cookies.set('isConnect', 'false');
