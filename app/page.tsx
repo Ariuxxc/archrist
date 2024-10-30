@@ -22,7 +22,7 @@ if (isAuthenticated === 'true') {
     setIsConnect(true)
 }
 
-})
+}, [])
 
 
 
@@ -43,7 +43,7 @@ if (isAuthenticated === 'true') {
                             <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
                             <li><a href="#skills" className="hover:text-orange-500 transition">Compétences</a></li>
                             {isConnect && (
-                                 <li><Link href="/blog/admin-panel" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Panneau d'admin</button></Link></li>
+                                 <li><Link href="/blog/admin-panel" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Panneau d&apos;admin</button></Link></li>
                             )
                            
 }

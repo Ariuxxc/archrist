@@ -58,7 +58,9 @@ export default function Post() {
             [name]: value
         });
     };
-
+const author = "Auteur de l&apos;article";
+const title = "titre de l&apos;article";
+const content = "Contenu de l&apos;article";
     return (
         <>
             <div className="d-flex">
@@ -81,15 +83,15 @@ export default function Post() {
                             {isForm && (
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
-                                        <label htmlFor="title" className="form-label">Titre de l&apos;article</label>
+                                        <label htmlFor="title" className="form-label">{title}</label>
                                         <input type="text" className="form-control" id="title" name="title" value={FormData.title} onChange={handleChange} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="content" className="form-label">Contenu de l&apos;article</label>
+                                        <label htmlFor="content" className="form-label">{content}</label>
                                         <input type="text" className="form-control" id="content" name="content" value={FormData.content} onChange={handleChange} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="author" className="form-label">Auteur de l&apos;article</label>
+                                        <label htmlFor="author" className="form-label">{author}</label>
                                         <input type="text" className="form-control" id="author" name="author" value={FormData.author} onChange={handleChange} />
                                     </div>
                                     <button type="submit" className="btn btn-primary">Submit</button>
@@ -113,9 +115,9 @@ export default function Post() {
                                 {article.length > 0 ? (
                                     article.map(articles => (
                                         <tr key={articles.id}>
-                                            <td>{articles.title || `Titre non disponible`}</td>
-                                            <td>{articles.content ? articles.content.slice(0, 50) + `...` : `Contenu non disponible`}</td>
-                                            <td>{articles.author || `Auteur non disponible`}</td>
+                                            <td>{articles.title || "Titre non disponible"}</td>
+                                            <td>{articles.content ? articles.content.slice(0, 50) + "..." : "Contenu non disponible"}</td>
+                                            <td>{articles.author || "Auteur non disponible"}</td>
                                         </tr>
                                     ))
                                 ) : (
