@@ -14,7 +14,7 @@ export default function Post() {
     axios.defaults.baseURL = "https://back-express-8g76.onrender.com";
     const [article, setArticle] = useState<Article[]>([]);
     const [isForm, setIsForm] = useState(false);
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState(``);
     const [viewArticle, setViewArticle] = useState(false);
     const [FormData, setFormData] = useState({
         title: "",
