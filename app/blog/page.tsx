@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Link from 'next/link'
+import Link from 'next/link';
+
 
 export default function Blog() {
   axios.defaults.baseURL = "https://back-express-8g76.onrender.com";
@@ -33,6 +34,7 @@ export default function Blog() {
     <meta property="og:title" content="Mes publications - Blog de Christian Ferreol" />
     <meta property="og:description" content="Découvrez les dernières publications de Christian Ferreol sur le développement web." />
     <meta property="og:url" content="https://jean-christ.vercel.app/blog" />
+    <meta property="og:image" content="https://jean-christ.vercel.app/image.png" />
     <meta property="og:type" content="website" />
  </head>
   <nav className="d-flex justify-content-between flex-wrap" style={{ marginBottom: '20px' }}>
