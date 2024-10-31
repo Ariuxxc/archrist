@@ -41,7 +41,7 @@ export default function Blog() {
     <meta property="og:description" content="Découvrez les dernières publications de Christian Ferreol sur le développement web." />
     <meta property="og:url" content="https://jean-christ.vercel.app/blog" />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="./image.png" />
+    <link rel="icon" href="https://media.istockphoto.com/id/626669886/photo/blogging-blog-word-coder-coding-using-laptop.jpg?s=1024x1024&w=is&k=20&c=xT2fsTWDolW5yPgElAwoVtR0aM7OKLuHu-kPlmvTzGw=" />
  </head>
 
             <nav className="navbar" style={{ backgroundColor: '#1e1e1e', padding: '10px 20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
