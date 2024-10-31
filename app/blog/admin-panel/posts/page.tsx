@@ -59,9 +59,6 @@ export default function Post() {
             [name]: value
         });
     };
-const author = "Auteur de l&apos;article";
-const title = "titre de l&apos;article";
-const content = "Contenu de l&apos;article";
     return (
         <>
             <div className="d-flex">

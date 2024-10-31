@@ -16,6 +16,7 @@ export default function Blog() {
             createdAt: string | number;
         }
  const [articles, setArticles] = useState<Article[]>([]);
+ const [loading, setLoading] = useState(true); // État de chargement
 
 
 
@@ -26,6 +27,8 @@ export default function Blog() {
                     setArticles(response.data);
                 } catch (error) {
                     console.error('Erreur lors de la récupération des articles:', error);
+                } finally {
+                    setLoading(false); // Mettre à jour l'état de chargement
                 }
             }
             fetchArticles();
@@ -62,14 +65,18 @@ export default function Blog() {
  <center><h2 style={{color: 'orange'}}>Welcome sur mon blog personnel ou je partage mes avis avec vous sur la <strong>Technologie web et du jeu <a href="https://wildbattle.jimdosite.com/">WildBattle</a></strong></h2></center>
            
             <div className="article-container shadow-sm">
-                {articles.map(article => (
-                    <div key={article.id} className="article">
-                        <h2>{article.title}</h2><br></br>
-                        <p>{article.content}</p>
-                        <p><strong>Author:</strong> {article.author}</p>
-                        <button>👍🏽</button>
-                    </div>
-                ))}
+                {loading ? ( // Afficher un message de chargement
+                    <p>Chargement des articles...</p>
+                ) : (
+                    articles.map(article => (
+                        <div key={article.id} className="article">
+                            <h2>{article.title}</h2><br></br>
+                            <p>{article.content}</p>
+                            <p><strong>Author:</strong> {article.author}</p>
+                            <button>👍🏽</button>
+                        </div>
+                    ))
+                )}
             </div>
               
          
