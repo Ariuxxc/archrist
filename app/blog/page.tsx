@@ -13,6 +13,7 @@ export default function Blog() {
             title: string;
             content: string;
             author: string;
+            createdAt: string | number;
         }
  const [articles, setArticles] = useState<Article[]>([]);
 
@@ -66,6 +67,7 @@ export default function Blog() {
                         <h2>{article.title}</h2><br></br>
                         <p>{article.content}</p>
                         <p><strong>Author:</strong> {article.author}</p>
+                        <p><strong>Date:</strong>{article.createdAt}</p>
                         <button>👍🏽</button>
                     </div>
                 ))}
