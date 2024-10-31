@@ -84,15 +84,15 @@ const content = "Contenu de l&apos;article";
                             {isForm && (
                                 <form onSubmit={handleSubmit}>
                                     <div className="mb-3">
-                                        <label htmlFor="title" className="form-label">{title}</label>
+                                        <label htmlFor="title" className="form-label">titre de l&apos;article</label>
                                         <input type="text" className="form-control" id="title" name="title" value={FormData.title} onChange={handleChange} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="content" className="form-label">{content}</label>
+                                        <label htmlFor="content" className="form-label">Contenu de l&apos;article</label>
                                         <input type="text" className="form-control" id="content" name="content" value={FormData.content} onChange={handleChange} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="author" className="form-label">{author}</label>
+                                        <label htmlFor="author" className="form-label">Auteur de l&apos;article</label>
                                         <input type="text" className="form-control" id="author" name="author" value={FormData.author} onChange={handleChange} />
                                     </div>
                                     <button type="submit" className="btn btn-primary">Submit</button>
