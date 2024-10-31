@@ -37,7 +37,9 @@ export default function Blog() {
     <meta property="og:description" content="Découvrez les dernières publications de Christian Ferreol sur le développement web." />
     <meta property="og:url" content="https://jean-christ.vercel.app/blog" />
     <meta property="og:type" content="website" />
+    <link rel="icon" href="./image.png" />
  </head>
+
             <nav className="navbar" style={{ backgroundColor: '#1e1e1e', padding: '10px 20px', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h2 className="text-xl font-bold" style={{ color: 'orange', flex: '1 1 100%', textAlign: 'center' }}>Blog Menu</h2>
                 <ul style={{ listStyleType: 'none', display: 'flex', margin: 0, padding: 0, flexWrap: 'wrap', justifyContent: 'center', width: '100%' }}>
@@ -56,7 +58,7 @@ export default function Blog() {
                     </li>
                 </ul>
             </nav>
- 
+ <center><h2 style={{color: 'orange'}}>Welcome sur mon blog personnel ou je partage mes avis avec vous sur la <strong>Technologie web et du jeu <a href="https://wildbattle.jimdosite.com/">WildBattle</a></strong></h2></center>
            
             <div className="article-container shadow-sm">
                 {articles.map(article => (
