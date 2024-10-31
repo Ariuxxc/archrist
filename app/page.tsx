@@ -1,6 +1,5 @@
 
 "use client"
-
 import Image from "next/image";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pdp from './assets/pdp.png';
@@ -27,7 +26,16 @@ if (isAuthenticated === 'true') {
 
 
     return (
+       
         <main className="bg-gray-900 text-white min-h-screen">
+             <head>
+            <title>Christian Ferreol - Développeur web fullstack</title>
+            <meta name="description" content="Développeur web fullstack en React, Node, Express et MongoDB" />
+            <link rel="icon" href="https://media.istockphoto.com/id/626669886/photo/blogging-blog-word-coder-coding-using-laptop.jpg?s=1024x1024&w=is&k=20&c=xT2fsTWDolW5yPgElAwoVtR0aM7OKLuHu-kPlmvTzGw=" />
+    
+         
+     
+        </head>
             <header className="container mx-auto py-16 px-4">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -42,7 +50,10 @@ if (isAuthenticated === 'true') {
                         <ul className="flex space-x-6">
                             <li><a href="#about" className="hover:text-orange-500 transition">À propos</a></li>
                             <li><a href="#skills" className="hover:text-orange-500 transition">Compétences</a></li>
-                            {isConnect && (
+                            <Link href="/blog">
+                            <button className="btn btn-primary">Blog</button>
+                            </Link> 
+                             {isConnect && (
                                  <li><Link href="/blog/admin-panel" className="hover:text-orange-500 transition"><button className="btn btn-outline-primary">Panneau d&apos;admin</button></Link></li>
                             )
                            
